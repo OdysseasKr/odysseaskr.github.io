@@ -167,6 +167,10 @@ hr{
     color: #FF5722;
 }
 
+.hide-on-desktops .project-title {
+    color: #212121 !important;
+}
+
 .jumbotron {
     padding: 4em !important;
     color: #FFFFFF;
