@@ -1,0 +1,8 @@
+<h4>Currently working on</h4>
+<ul>
+    {% for project in site.data.projects %}
+    <li>
+      <p><a class="project-title" href="{{ project.link }}">{{ project.name }}</a><br><small>{{ project.description }}</small></p>
+    </li>
+    {% endfor %}
+</ul>

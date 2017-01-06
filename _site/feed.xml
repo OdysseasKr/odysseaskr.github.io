@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Odysseas Kristalakos</title>
+    <description>[&quot;Computer Science Student&quot;, &quot;Freelancer Web Developer&quot;]</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 06 Jan 2017 23:34:05 +0200</pubDate>
+    <lastBuildDate>Fri, 06 Jan 2017 23:34:05 +0200</lastBuildDate>
+    <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Getting started with MIX and MIXAL</title>
+        <description>&lt;p&gt;Probably the reason you’ve come to this page is because someone asked you to develop something in MIXAL or learn to use MIX. So we are going to keep things as simple as possible and only focus on understanding MIX’s architecture and learning to write MIXAL source files.&lt;/p&gt;
+
+&lt;p&gt;So, MIX is a hypothetical computer used in the well-known &lt;em&gt;Art of Computer Programming&lt;/em&gt; written by Knuth. Since the book has become very popular, MIX was used as an easier way to make students dive into computer architecture and basic assembly programming. In other words, MIX is a primitive hypothetical computer that will help you understand better the real world machines.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, MIX and its assembly language, MIXAL, are very poorly documented online for a beginner. Of course, if you have access to a copy of &lt;em&gt;Art of Computer Programming&lt;/em&gt;, you can always read the book. But I didn’t have the book, so I had to go through some technical documentation and old text. On the other hand, MIX is not hard to comprehend if you have the right material. Thus, I hope this guide will help the beginners get their hands dirty.&lt;/p&gt;
+&lt;h3 id=&quot;emulators&quot;&gt;Emulators&lt;/h3&gt;
+&lt;p&gt;Since MIX is a hypothetical computer, the only way to see it working and write some code is through emulators. There is a great selection of emulators in the official MIX and MIXAL site found &lt;a href=&quot;http://www-cs-faculty.stanford.edu/~uno/taocp.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; , in the MIXware section.&lt;/p&gt;
+
+&lt;p&gt;If you are on Linux, your best bet is to go for GNU MDK. It’s command line based, works great and supports all of the I/O devices. Another great option for quick testing is &lt;a href=&quot;http://www.recreationalmath.com/mixal/&quot; target=&quot;_blank&quot;&gt;this&lt;/a&gt; online emulator. Very easy to use and works great, props to that man!&lt;/p&gt;
+
+&lt;p&gt;As for Windows, there are already lots of them to select. JMixSim seems nice even though I haven’t used it a lot&lt;/p&gt;
+
+&lt;p&gt;Finally, your best friend while developing, no matter what emulator you will use is the GNU MDK documentation. It is very well written. In fact, it contains everything you will need but it’s not the best starting point if you are a beginner. You can find it &lt;a href=&quot;https://www.gnu.org/software/mdk/manual/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; and we are going refer to it in the next chapters.&lt;/p&gt;
+
+&lt;h3 id=&quot;architecture&quot;&gt;Architecture&lt;/h3&gt;
+&lt;p&gt;For reference, please open the online emulator I mentioned earlier.&lt;/p&gt;
+
+&lt;p&gt;MIX is the simpliest kind of computer. It has a RAM of 4000 memory words or simply memory “cells” for those unfamiliar with basic computer architecture. This is the “MEMORY” part found in Dan’s emulator. Each word is a row with an address number(starting from 0000) and holds 6 bytes. Oddly enough, in MIXAL 1 byte = 6 bits.&lt;/p&gt;
+
+&lt;p&gt;What do we we store there? First of all you can store integers . Note that, the first byte (the left one) is used to store the sign (positive, negative). Thus, there are 5 bytes remaining to store our integer which can hold numbers from -1.073.741.824 to 1.073.741.823.&lt;/p&gt;
+
+&lt;p&gt;Moreover, you can store strings. Each byte is used to represent a character. Thus we have 64 different characters for each byte. Refer to the following table for byte values-character correlation.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;00&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;01&lt;/td&gt;
+      &lt;td&gt;A&lt;/td&gt;
+      &lt;td&gt;02&lt;/td&gt;
+      &lt;td&gt;B&lt;/td&gt;
+      &lt;td&gt;03&lt;/td&gt;
+      &lt;td&gt;C&lt;/td&gt;
+      &lt;td&gt;04&lt;/td&gt;
+      &lt;td&gt;D&lt;/td&gt;
+      &lt;td&gt;05&lt;/td&gt;
+      &lt;td&gt;E&lt;/td&gt;
+      &lt;td&gt;06&lt;/td&gt;
+      &lt;td&gt;F&lt;/td&gt;
+      &lt;td&gt;07&lt;/td&gt;
+      &lt;td&gt;G&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;08&lt;/td&gt;
+      &lt;td&gt;H&lt;/td&gt;
+      &lt;td&gt;09&lt;/td&gt;
+      &lt;td&gt;I&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;~&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+      &lt;td&gt;J&lt;/td&gt;
+      &lt;td&gt;12&lt;/td&gt;
+      &lt;td&gt;K&lt;/td&gt;
+      &lt;td&gt;13&lt;/td&gt;
+      &lt;td&gt;L&lt;/td&gt;
+      &lt;td&gt;14&lt;/td&gt;
+      &lt;td&gt;M&lt;/td&gt;
+      &lt;td&gt;15&lt;/td&gt;
+      &lt;td&gt;N&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;16&lt;/td&gt;
+      &lt;td&gt;O&lt;/td&gt;
+      &lt;td&gt;17&lt;/td&gt;
+      &lt;td&gt;P&lt;/td&gt;
+      &lt;td&gt;18&lt;/td&gt;
+      &lt;td&gt;Q&lt;/td&gt;
+      &lt;td&gt;19&lt;/td&gt;
+      &lt;td&gt;R&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;[&lt;/td&gt;
+      &lt;td&gt;21&lt;/td&gt;
+      &lt;td&gt;#&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;S&lt;/td&gt;
+      &lt;td&gt;23&lt;/td&gt;
+      &lt;td&gt;T&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;24&lt;/td&gt;
+      &lt;td&gt;U&lt;/td&gt;
+      &lt;td&gt;25&lt;/td&gt;
+      &lt;td&gt;V&lt;/td&gt;
+      &lt;td&gt;26&lt;/td&gt;
+      &lt;td&gt;W&lt;/td&gt;
+      &lt;td&gt;27&lt;/td&gt;
+      &lt;td&gt;X&lt;/td&gt;
+      &lt;td&gt;28&lt;/td&gt;
+      &lt;td&gt;Y&lt;/td&gt;
+      &lt;td&gt;29&lt;/td&gt;
+      &lt;td&gt;Z&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;31&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;32&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;33&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;34&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;35&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;36&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;37&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;38&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;39&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;40&lt;/td&gt;
+      &lt;td&gt;.&lt;/td&gt;
+      &lt;td&gt;41&lt;/td&gt;
+      &lt;td&gt;,&lt;/td&gt;
+      &lt;td&gt;42&lt;/td&gt;
+      &lt;td&gt;(&lt;/td&gt;
+      &lt;td&gt;43&lt;/td&gt;
+      &lt;td&gt;)&lt;/td&gt;
+      &lt;td&gt;44&lt;/td&gt;
+      &lt;td&gt;+&lt;/td&gt;
+      &lt;td&gt;45&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;46&lt;/td&gt;
+      &lt;td&gt;*&lt;/td&gt;
+      &lt;td&gt;47&lt;/td&gt;
+      &lt;td&gt;/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;48&lt;/td&gt;
+      &lt;td&gt;=&lt;/td&gt;
+      &lt;td&gt;49&lt;/td&gt;
+      &lt;td&gt;$&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;&amp;lt;&lt;/td&gt;
+      &lt;td&gt;51&lt;/td&gt;
+      &lt;td&gt;&amp;gt;&lt;/td&gt;
+      &lt;td&gt;52&lt;/td&gt;
+      &lt;td&gt;@&lt;/td&gt;
+      &lt;td&gt;53&lt;/td&gt;
+      &lt;td&gt;;&lt;/td&gt;
+      &lt;td&gt;54&lt;/td&gt;
+      &lt;td&gt;:&lt;/td&gt;
+      &lt;td&gt;55&lt;/td&gt;
+      &lt;td&gt;’&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;In memory cells we can also store instructions. But we will get into that later.&lt;/p&gt;
+
+&lt;p&gt;MIX has a CPU of course which has 9 registers with the most important being rA and rX. Registers are one-word “memories” used by the CPU for storing an important value or performing arithmetic operations.&lt;/p&gt;
+
+&lt;p&gt;Apart from these three registers, there is a program counter(“PC”) which indicates the position of the instruction in memory, that the CPU will process in the next step.&lt;/p&gt;
+
+&lt;p&gt;There is also the “OV” flag (a theoretical light indicator) that turns on when an overflow has happened. This happens, for example, when the result of adding two numbers is greater than 1.073.741.823 and thus it can not be stored in the memory.&lt;/p&gt;
+
+&lt;p&gt;Finally, there is one more register, “CI”, which takes three values: L(ess), E(qual) and G(reater) and is used when performing comparisons.
+Don’t sweat it too much, you will fully understand them when you start writing source code.&lt;/p&gt;
+
+&lt;p&gt;Finally, for I/O operations, MIXAL is connected to a variety of devices like printers, consoles, tape machines etc that can be accessed by writing to the memory addresses 0-20. For example 0-7 is used for I/O with the tape and 19 with the terminal.&lt;/p&gt;
+
+&lt;h3 id=&quot;mixal-and-writing-source-code&quot;&gt;MIXAL and writing source code&lt;/h3&gt;
+&lt;p&gt;To write a program for MIX, you need to write it in a specific assembly language called MIXAL and “compile” it (everywhere is referred as “compiling” but the correct term is “assembling”). In Dan’s simulator you just have to paste the source code into the left text box and click compile. But if you are using an emulator like GNU MDK, you need to compile it first (refer to the documentation).&lt;/p&gt;
+
+&lt;p&gt;A source file includes lines of code, each line containing exactly one instruction. Then, every instruction is loaded into a memory word.&lt;/p&gt;
+
+&lt;p&gt;Each instruction has the structure:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;LABEL    OPERATOR    VALUE&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;LABEL&lt;/code&gt; : a symbolic name for the current instruction or memory address.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;OPERATOR&lt;/code&gt; : one of the MIXAL operators (e.g. ADD, SUB, LDA)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;VALUE&lt;/code&gt; : the value that the operator uses.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To make it easier to understand, whenever you change line in the source code file, you move to the next memory word. This will become clear in the following example:&lt;/p&gt;
+
+&lt;p&gt;A sample program is the following.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+START    EQU    2000         
+         ORIG   START        
+N        CON    4            
+         LDA    N            
+         ADD    =1=          
+         STA    N            
+         HLT                 
+         END    START        
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It’s a very silly program but it will do for the purpose of this tutorial.&lt;/p&gt;
+
+&lt;p&gt;The first line makes the label &lt;code class=&quot;highlighter-rouge&quot;&gt;START&lt;/code&gt; equal to the memory address 2000. The next line indicates that the first instruction of our program is the value of the label &lt;code class=&quot;highlighter-rouge&quot;&gt;START&lt;/code&gt; (in this case 2000). The next instruction will be placed in 2001, the following in 2002 etc. Try pasting the code into Dan’s emulator and hit compile. You will see the memory cells 2000-2004 filling with the instruction code.&lt;/p&gt;
+
+&lt;p&gt;Line 3 is the first instruction of our program. It indicates that the current memory address(2000) can now be referred with the label N. Also, &lt;code class=&quot;highlighter-rouge&quot;&gt;CON&lt;/code&gt;, sets the value of the current address to 4. And we just declared a variable and assigned a value to it.&lt;/p&gt;
+
+&lt;p&gt;Line 4 loads the contents of &lt;code class=&quot;highlighter-rouge&quot;&gt;N&lt;/code&gt;(address 2000) to the register &lt;code class=&quot;highlighter-rouge&quot;&gt;rA&lt;/code&gt;. Currently the contents of &lt;code class=&quot;highlighter-rouge&quot;&gt;N&lt;/code&gt; are 4 so &lt;code class=&quot;highlighter-rouge&quot;&gt;rA&lt;/code&gt; takes the value 4.&lt;/p&gt;
+
+&lt;p&gt;Line 5 adds to the &lt;code class=&quot;highlighter-rouge&quot;&gt;rA&lt;/code&gt; the integer 1. Whenever the &lt;code class=&quot;highlighter-rouge&quot;&gt;VALUE&lt;/code&gt; field of the instruction is wrapped in “=”, it’s a literal integer value. If we hadn’t put the “=” signs, it would have added the contents of the address 1 to rA.
+So why didn’t we use &lt;code class=&quot;highlighter-rouge&quot;&gt;=4=&lt;/code&gt; in line 3? Well, &lt;code class=&quot;highlighter-rouge&quot;&gt;CON&lt;/code&gt; instruction is never followed by a memory address and thus 4 is a literal.&lt;/p&gt;
+
+&lt;p&gt;Line 6 stores the value of &lt;code class=&quot;highlighter-rouge&quot;&gt;rA&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;N&lt;/code&gt;. You can now notice that the value of memory address 2000 (remember: N stands for address 2000) has the value 5.&lt;/p&gt;
+
+&lt;p&gt;Finally line 7 stops the execution of our program. Line 8 indicates that the program that started in address &lt;code class=&quot;highlighter-rouge&quot;&gt;START&lt;/code&gt; (address 2000), ends.&lt;/p&gt;
+
+&lt;p&gt;Feel free to run the program. You can also run it step by step to see the result after the execution of each instruction. Notice that the PC increments by 1 every time you hit step and the CPU moves to the next instruction/memory address.&lt;/p&gt;
+
+&lt;p&gt;This was a very basic program. If you can understand the structure of the source file, writing MIXAL programs is a piece of cake. All you need to do is learn the instructions and their syntax by reading &lt;a href=&quot;https://www.gnu.org/software/mdk/manual/html_node/MIX-instruction-set.html#MIX-instruction-set&quot; target=&quot;_blank&quot;&gt;this&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;That’s all for now. Hopefully, I will write some more posts on developing on MIXAL, explaining some tricky instructions or explaining some source code.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 03 Jan 2017 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000#2017-01-03-00</link>
+        <guid isPermaLink="true">/2017/01/mix-mixal</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

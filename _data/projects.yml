@@ -1,0 +1,6 @@
+- name: NILM
+  link: "#"
+  description: "Non-intrusive load monitoring of household energy consumption"
+- name: Jekyll
+  link: "http://jekyllrb.com/"
+  description: "Just messing around"

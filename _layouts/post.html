@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{ site.isolang }}" itemscope itemtype="http://schema.org/WebPage">
+
+{% include head.html %}
+
+<body class="wrap wider post-body">
+	<div class="grid post-wrapper">
+		<div id="/home" class="unit align-center three-thirds jumbotron">
+			<h1> {{page.title}} </h1>
+			<h5> By <a href="../../">{{page.author}}</a></h5>
+		</div>
+		<div class="unit one-fifth"></div>
+		<div class="unit three-fifths post-content">
+
+			<small class="chip">{{ page.date | date: "%b %-d, %Y" }}</small>
+			<a class="chip" target="_blank" href="https://twitter.com/intent/tweet?text={{ page.title | cgi_escape }}&url={{ page.url }}"><i class="icon ion-social-twitter"></i> TWEET</a>
+			<a class="chip" href="{{page.url}}"><i class="icon ion-android-share-alt"></i> LINK</a>
+
+			<div class="grid">
+				{{ content }}
+				<hr>
+				<div class="unit whole" id="/subscribe">
+					<p><a href="feed.xml">RSS</a> & <a href="atom.xml">ATOM</a> Feed<br>Built with Jekyll, Based on the <a href="https://github.com/lukas-h/onepage">onepage</a> theme.</p>
+				</div>
+			</div>
+		</div>
+		<div class="unit one-fifth"></div>
+	</div>
+
+	{% include foot.html %}
+
+</body>
+
+</html>
