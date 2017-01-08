@@ -204,3 +204,12 @@ pre.highlight {
     padding: 0 2em;
     background: #B2DFDB;
 }
+
+#comments {
+    margin: 4em 0;
+}
+
+#comments h2 {
+    padding-left: 0px;
+    border-left: 0px;
+}
