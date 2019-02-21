@@ -14,6 +14,8 @@
 					{% for desc in site.description %}
 						{% if forloop.last == true%}
 							&nbsp;&nbsp;{{ desc }} ]
+						{% elsif forloop.first == true%}
+							{{ desc }},<br>
 						{% else %}
 							&nbsp;&nbsp;{{ desc }},<br>
 						{% endif %}
