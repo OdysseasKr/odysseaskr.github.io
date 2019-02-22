@@ -6,7 +6,7 @@ highlighter: rouge
 lsi: false
 permalink: /:year/:month/:title.html
 
-title: "Odysseas Kristalakos"
+title: "Odysseas Krystalakos (Ody)"
 description: ["AI Master Student", "Computer Science Graduate", "Freelancer Web Developer"]
 baseurl: ""
 url: "http://odysseaskr.github.io" # replace by your site's url
