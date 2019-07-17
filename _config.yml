@@ -12,7 +12,8 @@ baseurl: ""
 url: "http://odysseaskr.github.io" # replace by your site's url
 twitter_username: your-name
 linkedin_username: odysseaskr
-github_username:  OdysseasKr # (your name)
+github_username:  OdysseasKr
+kaggle_username:  odysseask
 
 # Colors
 dark-primary: "#00796B"
