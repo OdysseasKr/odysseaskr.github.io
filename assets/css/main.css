@@ -167,6 +167,20 @@ hr{
     color: #FF5722;
 }
 
+.info-item {
+    font-weight: bold;
+    color: #FFFFFF;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.info-item:hover,
+.info-item:active,
+.info-item:focus{
+    font-weight: bold;
+    color: #FF5722;
+}
+
 .hide-on-desktops .project-title {
     color: #212121 !important;
 }
