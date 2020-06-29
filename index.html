@@ -6,8 +6,6 @@ layout: default
 <div id="{{ post.date | date: "%F-%H" }}" class="unit whole align-left post">
 	<article itemscope itemtype="http://schema.org/BlogPosting">
 		<h2><a href="{{post.url}}">{{ post.title }}</a></h2>
-		<br>
-		{% include social.html %}
 
 		<div class="post-content">
 			{{ post.content | truncate:300 }}
