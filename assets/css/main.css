@@ -227,3 +227,17 @@ pre.highlight {
     padding-left: 0px;
     border-left: 0px;
 }
+
+.pub-title {
+    font-size: 20px;
+    margin-bottom: 0.5rem
+}
+
+.pub-authors {
+    font-size: 14px;
+}
+
+.pub-journal {
+    font-size: 14px;
+    font-style: italic;
+}
