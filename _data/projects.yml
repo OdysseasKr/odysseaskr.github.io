@@ -1,6 +1,6 @@
-- name: NILM
+- name: Automatic Appliance Identification
   link: "#"
-  description: "Non-intrusive load monitoring of household energy consumption"
-- name: Jekyll
-  link: "http://jekyllrb.com/"
-  description: "Just messing around"
+  description: "Identification of appliances using power consumption data, machine learning and smart outlets."
+- name: AI for Synthesizers
+  link: "https://github.com/OdysseasKr/NatCom-soundmatching"
+  description: "Configuring synthesizers to match sounds using genetic algorithms."
