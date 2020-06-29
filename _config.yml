@@ -27,11 +27,6 @@ divider: "#BDBDBD"
 
 author: Odysseas
 
-# Imprint stuff
-address:
-email:
-imprint: false
-
 # language settings
 isolang: en
 
