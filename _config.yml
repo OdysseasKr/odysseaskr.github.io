@@ -7,7 +7,7 @@ lsi: false
 permalink: /:year/:month/:title.html
 
 title: "Odysseas Krystalakos (Ody)"
-description: ["AI Master Student", "Computer Science Graduate", "Freelance Developer"]
+description: ["Machine Leanring Engineer", "AI Master Student", "Freelance Developer"]
 baseurl: ""
 url: "http://odysseaskr.github.io" # replace by your site's url
 twitter_username: your-name
