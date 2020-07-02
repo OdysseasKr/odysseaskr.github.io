@@ -4,53 +4,53 @@
 {% include head.html %}
 
 <body class="wrap wider">
-	<div class="grid">
-		<div id="/home" class="unit one-third sidebar">
-			<div class="grid">
-				<div class="unit whole" id="/home">
-					<h1>{{ site.title }}</h1>
-					<p style="font-family: monospace">
-					[
-					{% for desc in site.description %}
-						{% if forloop.last == true%}
-							&nbsp;&nbsp;{{ desc }} ]
-						{% elsif forloop.first == true%}
-							{{ desc }},<br>
-						{% else %}
-							&nbsp;&nbsp;{{ desc }},<br>
-						{% endif %}
-					{% endfor %}
-					</p>
+    <div class="grid">
+        <div id="/home" class="unit one-third sidebar">
+            <div class="grid">
+                <div class="unit whole" id="/home">
+                    <h1>{{ site.title }}</h1>
+                    <p style="font-family: monospace">
+                    [
+                    {% for desc in site.description %}
+                        {% if forloop.last == true%}
+                            &nbsp;&nbsp;{{ desc }} ]
+                        {% elsif forloop.first == true%}
+                            {{ desc }},<br>
+                        {% else %}
+                            &nbsp;&nbsp;{{ desc }},<br>
+                        {% endif %}
+                    {% endfor %}
+                    </p>
 
-				</div>
-				<div class="unit whole" id="/contact">
-					<a href="https://github.com/{{ site.github_username }}" class="github-icon btn"><i class="icon ion-social-github"></i></a>
-					<a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" class="linkedin-icon btn"><i class="icon ion-social-linkedin"></i></a>
-					<a href="https://www.kaggle.com/{{ site.kaggle_username }}" class="kaggle-icon btn"><img class="icon" src="/assets/icons/kaggle.png" width="19" style="border-radius: 3px;"></a>
-					<a href="https://www.upwork.com/o/profiles/users/_~01b7a6624898c12923/" class="upwork-icon btn"><img class="icon" src="/assets/icons/upwork.png" width="22" style="border-radius: 3px;"></a>
-				</div>
-				<div class="unit whole" id="/projects">
-					{% include projects.html %}
-				</div>
-				<div class="unit whole" id="/info">
-					{% include info.html %}
-				</div>
-			</div>
-		</div>
-		<div class="unit two-thirds blog-column">
-			<div class="grid">
-				<div class="unit whole" id="/blog">
-					<h1>Blog Posts</h1>
-					<hr>
-				</div>
-				{{ content }}
+                </div>
+                <div class="unit whole" id="/contact">
+                    <a href="https://github.com/{{ site.github_username }}" class="github-icon btn"><i class="icon ion-social-github"></i></a>
+                    <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" class="linkedin-icon btn"><i class="icon ion-social-linkedin"></i></a>
+                    <a href="https://www.kaggle.com/{{ site.kaggle_username }}" class="kaggle-icon btn"><img class="icon" src="/assets/icons/kaggle.png" width="19" style="border-radius: 3px;"></a>
+                    <a href="https://www.upwork.com/o/profiles/users/_~01b7a6624898c12923/" class="upwork-icon btn"><img class="icon" src="/assets/icons/upwork.png" width="22" style="border-radius: 3px;"></a>
+                </div>
+                <div class="unit whole" id="/projects">
+                    {% include projects.html %}
+                </div>
+                <div class="unit whole" id="/info">
+                    {% include info.html %}
+                </div>
+            </div>
+        </div>
+        <div class="unit two-thirds blog-column">
+            <div class="grid">
+                <div class="unit whole" id="/blog">
+                    <h1>Blog Posts</h1>
+                    <hr>
+                </div>
+                {{ content }}
 
-				<div class="unit whole" id="/subscribe">
-					<p><br>Built with Jekyll, Based on the <a href="https://github.com/lukas-h/onepage">onepage</a> theme.</p>
-				</div>
-			</div>
-		</div>
-	</div>
+                <div class="unit whole" id="/subscribe">
+                    <p><br>Built with Jekyll, Based on the <a href="https://github.com/lukas-h/onepage">onepage</a> theme.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
