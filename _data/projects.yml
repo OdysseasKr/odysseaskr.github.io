@@ -1,6 +1,3 @@
-- name: Automatic Appliance Identification
+- name: Rust and VST
   link: "#"
-  description: "Identification of appliances using power consumption data, machine learning and smart outlets."
-- name: AI for Synthesizers
-  link: "https://github.com/OdysseasKr/NatCom-soundmatching"
-  description: "Configuring synthesizers to match sounds using genetic algorithms."
+  description: "Getting a hang of Rust and making noises."

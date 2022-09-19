@@ -6,8 +6,8 @@ highlighter: rouge
 lsi: false
 permalink: /:year/:month/:title.html
 
-title: "Odysseas Krystalakos (Ody)"
-description: ["AI Researcher", "Machine Learning Engineer"]
+title: "Odysseas (Ody) Krystalakos"
+description: ["Data Scientist/Engineer @ MX3D", "Tinkerer"]
 baseurl: ""
 url: "http://odysseaskr.github.io" # replace by your site's url
 twitter_username: your-name
@@ -25,7 +25,7 @@ primary-text: "#212121"
 secondary-text: "#757575"
 divider: "#BDBDBD"
 
-author: Odysseas
+author: Ody
 
 # language settings
 isolang: en
