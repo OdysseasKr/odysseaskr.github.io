@@ -194,7 +194,7 @@ hr{
 }
 
 .jumbotron, .sidebar {
-    box-shadow: 0.2em 0.2em 0.15em #757575;
+    box-shadow: 6px 6px #757575;
 }
 
 .jumbotron a ,
