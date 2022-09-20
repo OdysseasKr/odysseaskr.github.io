@@ -1,3 +1,6 @@
+- name: 3D Printing Keyboards ⌨️
+  link: "https://github.com/OdysseasKr/TSExt"
+  description: "Designing and assembling 3D Printed mechanical keyboards."
 - name: Rust and VST
   link: "#"
   description: "Getting a hang of Rust and making noises."
