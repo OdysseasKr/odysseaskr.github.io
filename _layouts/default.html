@@ -28,12 +28,12 @@
                     <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" class="linkedin-icon btn"><i class="icon ion-social-linkedin"></i></a>
                     <a href="https://www.kaggle.com/{{ site.kaggle_username }}" class="kaggle-icon btn"><img class="icon" src="/assets/icons/kaggle.png" width="19" style="border-radius: 3px;"></a>
                 </div>
-                <div class="unit whole" id="/projects">
+                <div class="unit whole" id="/currentlyworking">
                     <h3>Currently working on</h3>
                     <ul>
-                        {% for project in site.data.projects %}
+                        {% for p in site.data.currentlyworking %}
                         <li>
-                        <p><a class="project-title" href="{{ project.link }}">{{ project.name }}</a><br><small>{{ project.description }}</small></p>
+                        <p><a class="currentlyworking-title" href="{{ p.link }}">{{ p.name }}</a><br><small>{{ p.description }}</small></p>
                         </li>
                         {% endfor %}
                     </ul>

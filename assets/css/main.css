@@ -155,14 +155,14 @@ hr{
     color: #FF5722;
 }
 
-.project-title {
+.currentlyworking-title {
     font-weight: bold;
     color: #FFFFFF;
 }
 
-.project-title:hover,
-.project-title:active,
-.project-title:focus{
+.currentlyworking-title:hover,
+.currentlyworking-title:active,
+.currentlyworking-title:focus{
     font-weight: bold;
     color: #FF5722;
 }
@@ -181,7 +181,7 @@ hr{
     color: #FF5722;
 }
 
-.hide-on-desktops .project-title {
+.hide-on-desktops .currentlyworking-title {
     color: #212121 !important;
 }
 
