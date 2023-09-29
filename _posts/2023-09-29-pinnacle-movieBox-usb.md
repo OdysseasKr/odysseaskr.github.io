@@ -23,11 +23,11 @@ So far I have not been able to get it to work on any of my machines. I am docume
 
 ### Windows Drivers
 
-I came across this official Pinnacle page with a bunch of legacy drivers. As far as I can see there are only drivers for 32-bit setups up-until Windows 7.
+I came across this official Pinnacle page with a bunch of legacy drivers. As far as I can see there are only drivers for 32-bit setups, up until Windows 7.
 
 [https://cdn.pinnaclesys.com/SupportFiles/Hardware_Installer/readmeHW10.htm ](https://cdn.pinnaclesys.com/SupportFiles/Hardware_Installer/readmeHW10.htm)
 
-I could not get these drivers to work in Windows 10. This [forum post](https://forums.tomshardware.com/threads/pinnacle-moviebox-usb-b-driver-for-windows-10.3681379/) also seems to confirm that they wouldn't work.
+I could not get these drivers to work in Windows 10. This [forum post](https://forums.tomshardware.com/threads/pinnacle-moviebox-usb-b-driver-for-windows-10.3681379/) seems to confirm that they would not work.
 
 My second attempt was to setup a Windows XP machine in virtual box. That didn't seem to detect the MovieBox at all.
 
