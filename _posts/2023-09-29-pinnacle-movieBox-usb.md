@@ -9,11 +9,14 @@ commentsId: 1
 
 I recently got my hands on a Pinnacle MovieBox USB. It's a capture card with Composite and S-Video input from the mid-2000. It looked very sturdy as a device and would have been handy in a few art projects. If I could get it to work that is.
 
+![picture of moviebox](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.hwp.ru%2FMultimedia%2FPinnaclemoviebox.usb%2FPinnaclemoviebox5.jpg&f=1&nofb=1&ipt=a48a898b6d77e21ff0b1bec896dae32a10dde35d1709693f2db5dd8459c14c5e&ipo=images)
+
 Here are some resources I could find on the internet.
 
-Manual: https://manualmachine.com/pinnacle/movieboxusb/10304172-manual/
+Manual: [https://manualmachine.com/pinnacle/movieboxusb/10304172-manual/](https://manualmachine.com/pinnacle/movieboxusb/10304172-manual/)
 
-A Youtube video that shows it in use in a Windows 10 setup: https://www.youtube.com/watch?v=UGfLlNgKug8
+[Here's](https://www.youtube.com/watch?v=UGfLlNgKug8) a Youtube video that shows it in use in a Windows 10 setup: 
+
 
 So far I have not been able to get it to work on any of my machines. I am documenting my attempts here with the hope that someone else can do better.
 
@@ -22,7 +25,7 @@ So far I have not been able to get it to work on any of my machines. I am docume
 
 I came across this official Pinnacle page with a bunch of legacy drivers. As far as I can see there are only drivers for 32-bit setups up-until Windows 7.
 
-https://cdn.pinnaclesys.com/SupportFiles/Hardware_Installer/readmeHW10.htm 
+[https://cdn.pinnaclesys.com/SupportFiles/Hardware_Installer/readmeHW10.htm ](https://cdn.pinnaclesys.com/SupportFiles/Hardware_Installer/readmeHW10.htm)
 
 I could not get these drivers to work in Windows 10. This [forum post](https://forums.tomshardware.com/threads/pinnacle-moviebox-usb-b-driver-for-windows-10.3681379/) also seems to confirm that they wouldn't work.
 
@@ -38,6 +41,6 @@ If you are comfortable with C and willing to fiddle with old Linux kernel versio
 
 ### Accompanying software
 
-Archive.org has a ISO of the "studio" software that you can use to capture and edit: https://archive.org/details/pinnaclestudio8
+Archive.org has a ISO of the "studio" software that you can use to capture and edit: [https://archive.org/details/pinnaclestudio8](https://archive.org/details/pinnaclestudio8)
 
 It requires a 10-digit activation code and I was able to brute-force it in just three tries. Didn't write down the code unfortunately.
