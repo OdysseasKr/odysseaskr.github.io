@@ -49,11 +49,11 @@ h2 a:hover{
 img{
     max-width: 100%;
 }
-ul{
+.sidebar ul{
     list-style-type: none;
     padding: 0;
 }
-li{
+.sidebar li{
     display: list-item;
     text-align: -webkit-match-parent;
     list-style-type: none;
@@ -209,13 +209,12 @@ code, kbd{
     border-radius: 3px;
     background: #B2DFDB;
     line-height: 16.5px;
-    font-family: Consolas, monaco, monospace;
+    font-family: Liberation Mono, Consolas, monaco, monospace;
     font-size: 15px;
-    padding: 2px 4px;
 }
 
 pre.highlight {
-    padding: 0 2em;
+    padding: 0.5em 1em;
     background: #B2DFDB;
 }
 
