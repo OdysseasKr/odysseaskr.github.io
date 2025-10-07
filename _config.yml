@@ -1,0 +1,37 @@
+safe: false
+
+# build settings
+markdown: kramdown
+highlighter: rouge
+lsi: false
+permalink: /:year/:month/:title.html
+
+title: "Odysseas Krystalakos"
+description: ["Software Engineer @ Newzoo", "Tinkerer"]
+baseurl: ""
+url: "http://odysseaskr.github.io" # replace by your site's url
+twitter_username: your-name
+linkedin_username: odysseaskr
+github_username:  OdysseasKr
+kaggle_username:  odysseask
+
+# Colors
+dark-primary: "#00796B"
+primary: "#009688"
+light-primary: "#B2DFDB"
+accent: "#FF5722"
+light-text: "#FFFFFF"
+primary-text: "#212121"
+secondary-text: "#757575"
+divider: "#BDBDBD"
+
+author: Odysseas
+
+# language settings
+isolang: en
+
+# exclude files
+exclude:
+  - LICENSE
+  - README.md
+  - .gitignore
