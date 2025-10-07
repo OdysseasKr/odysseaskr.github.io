@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ site.isolang }}" itemscope itemtype="http://schema.org/WebPage">
+
+{% include head.html %}
+
+<body class="wrap wider post-body">
+    <div class="grid post-wrapper">
+        <div id="/home" class="unit align-center three-thirds jumbotron">
+            <h1> {{page.title}} </h1>
+
+            {% if page.author != null and page.author != empty %}
+            <h5> By <a href="../../">{{page.author}}</a></h5>
+            {% endif %}
+
+            {% if page.date != null and page.date != empty %}
+            <h6>Posted on {{ page.date | date: "%b %-d, %Y" }}</h6>
+            {% endif %}
+        </div>
+        <div class="unit one-fifth"></div>
+        <div class="unit three-thirds post-content">
+            <div class="grid">
+                {{ content }}
+
+                {% if page.commentsId != null and page.commentsId != empty %}
+                 <hr>
+                <div id="comments">
+                    <h2>Comments</h2>
+                    <div id="header">
+                        Do you have something to say? Leave a comment on<a href="https://github.com/OdysseasKr/odysseaskr.github.io/issues/{{page.commentsId}}"> this post's issue page on GitHub</a>.
+                    </div>
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+        <div class="unit one-fifth"></div>
+    </div>
+</body>
+
+</html>

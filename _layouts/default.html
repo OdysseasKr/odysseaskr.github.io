@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{ site.isolang }}" itemscope itemtype="http://schema.org/WebPage">
+
+{% include head.html %}
+
+<body class="wrap wider">
+    <div class="grid">
+        <div id="/home" class="unit one-third sidebar">
+            <div class="grid">
+                <div class="unit whole" id="/home">
+                    <h1>{{ site.title }}</h1>
+                    <p style="font-family: monospace">
+                    [
+                    {% for desc in site.description %}
+                        {% if forloop.last == true%}
+                            &nbsp;&nbsp;{{ desc }} ]
+                        {% elsif forloop.first == true%}
+                            {{ desc }},<br>
+                        {% else %}
+                            &nbsp;&nbsp;{{ desc }},<br>
+                        {% endif %}
+                    {% endfor %}
+                    </p>
+
+                </div>
+                <div class="unit whole" id="/contact">
+                    <a href="https://github.com/{{ site.github_username }}" class="github-icon btn"><i class="icon ion-social-github"></i></a>
+                    <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" class="linkedin-icon btn"><i class="icon ion-social-linkedin"></i></a>
+                    <a href="https://www.kaggle.com/{{ site.kaggle_username }}" class="kaggle-icon btn"><img class="icon" src="/assets/icons/kaggle.png" width="19" style="border-radius: 3px;"></a>
+                </div>
+                <div class="unit whole" id="/currentlyworking">
+                    <h3>Currently working on</h3>
+                    <ul>
+                        {% for p in site.data.currentlyworking %}
+                        <li>
+                        <p><a class="currentlyworking-title" href="{{ p.link }}">{{ p.name }}</a><br><small>{{ p.description }}</small></p>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="unit whole" id="/info">
+                    <!--<h3>Other info</h3>-->
+                    <!--<a class="info-item" href="/assets/cv.pdf">CV</a>-->
+                    <a class="info-item" href="/pubs.html">Academic work</a>
+                </div>
+            </div>
+        </div>
+        <div class="unit two-thirds blog-column">
+            <div class="grid">
+                {{ content }}
+
+                <div class="unit whole" id="/subscribe">
+                    <p><br>Built with Jekyll, Based on the <a href="https://github.com/lukas-h/onepage">onepage</a> theme.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+- name: 3D-Printed Keyboards ⌨️
+  link: "https://github.com/OdysseasKr/TSExt"
+  description: "Designing and assembling 3D-printed mechanical keyboards."
+- name: Code checker for ABB Robots
+  link: "https://github.com/OdysseasKr/rapidchecker"
+  description: "Writing a code format checker for RAPID, the language for ABB IRC5 industrial robots"

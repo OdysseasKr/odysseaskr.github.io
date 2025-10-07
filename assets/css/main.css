@@ -1,0 +1,243 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16.5px;
+    color: #212121;
+    padding: 1em;
+}
+h1{ font-size: 42px;}
+h2{ font-size: 32px;}
+h3{ font-size: 28px;}
+h4{ font-size: 24px;}
+h5{ font-size: 20px;}
+h6{ font-size: 18px;}
+.sidebar h1, .jumbotron h1{ text-shadow: 1px 3px #757575;}
+.sidebar h2{ text-shadow: 1px 3px #757575;}
+.sidebar h3{ text-shadow: 1px 3px #757575;}
+.sidebar h4{ text-shadow: 1px 3px #757575;}
+.sidebar h5{ text-shadow: 1px 3px #757575;}
+.sidebar h6{ text-shadow: 1px 3px #757575;}
+
+h1, h2{
+    margin: 20px 0px 0px;
+    font-weight: 500;
+}
+h3, h4, h5, h6{
+    margin: 20px 0px 0px;
+    font-weight: 400;
+}
+small{
+    font-size: 13px;
+}
+a{
+    text-decoration: none;
+    color: #FF5722;
+    cursor: pointer;
+}
+a:hover{
+    color: #FF5722;
+}
+a:active{
+    color: #FF5722;
+}
+h2 a,
+h2 a:active{
+    color: #212121;
+}
+h2 a:hover{
+    color: #212121;
+    text-decoration: underline;
+}
+img{
+    max-width: 100%;
+}
+.sidebar ul{
+    list-style-type: none;
+    padding: 0;
+}
+.sidebar li{
+    display: list-item;
+    text-align: -webkit-match-parent;
+    list-style-type: none;
+    margin: 0;
+}
+table, th, td{
+    border: 1px solid #BDBDBD;
+    border-collapse: collapse;
+    padding: 0.5em;
+}
+
+hr{
+    color: #BDBDBD;
+}
+/*
+.github-icon:hover, .github-icon:focus, .github-icon:active{
+    color: #85d063;
+}
+.twitter-icon:hover, .twitter-icon:focus, .twitter-icon:active{
+    color: #1da0f2;
+}
+.mail-icon:hover, .mail-icon:focus, .mail-icon:active{
+    color: #db4646;
+}
+.rss-icon:hover, .rss-icon:focus, .rss-icon:active{
+    color: #f49c52;
+}
+*/
+.btn{
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 0.5rem;
+    cursor: pointer;
+    transition: background-color .2s;
+    vertical-align: middle;
+    color: #343434;
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+.btn:focus, .btn:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+.btn:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.btn.disabled, btn:disabled {
+  background-color: transparent !important;
+  color: #b3b3b3 !important;
+  cursor: default;
+}
+
+.post{ margin-top: 30px; }
+.post-content h1{ font-size: 28px; text-shadow: none;}
+.post-content h2{ font-size: 24px; text-shadow: none;}
+.post-content h3{ font-size: 22px; text-shadow: none;}
+.post-content h4{ font-size: 20px; text-shadow: none;}
+.post-content h5{ font-size: 18px; text-shadow: none;}
+.post-content h6{ font-size: 16px; text-shadow: none;}
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6{
+    padding-left: 8px;
+    border-left: 5px solid #009688;
+    text-shadow: none;
+}
+.post-content{
+    line-height: 1.5;
+}
+
+.blog-column{
+    padding: 2em 3em !important;
+}
+
+.chip{
+    display: inline-block;
+    height: 30px;
+    font-family: Consolas, monaco, monospace;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 30px;
+    padding: 0 10px;
+    border-radius: 15px;
+    border: 1px solid #FF5722;
+    background-color: #fff;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.chip .icon{
+    color: #FF5722;
+}
+
+.currentlyworking-title {
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.currentlyworking-title:hover,
+.currentlyworking-title:active,
+.currentlyworking-title:focus{
+    font-weight: bold;
+    color: #FF5722;
+}
+
+.info-item {
+    font-weight: bold;
+    color: #FFFFFF;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.info-item:hover,
+.info-item:active,
+.info-item:focus{
+    font-weight: bold;
+    color: #FF5722;
+}
+
+.hide-on-desktops .currentlyworking-title {
+    color: #212121 !important;
+}
+
+.jumbotron {
+    padding: 4em !important;
+    color: #FFFFFF;
+    background-color: #009688;
+    border-bottom: #BDBDBD;
+    margin-bottom: 1em;
+}
+
+.jumbotron, .sidebar {
+    box-shadow: 6px 6px rgba(117, 117, 117, 0.4);
+}
+
+.jumbotron a ,
+.jumbotron a:active,
+.jumbotron a:visited,
+.jumbotron a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+code, kbd{
+    border-radius: 3px;
+    background: #B2DFDB;
+    line-height: 16.5px;
+    font-family: Liberation Mono, Consolas, monaco, monospace;
+    font-size: 15px;
+}
+
+pre.highlight {
+    padding: 0.5em 1em;
+    background: #B2DFDB;
+}
+
+#comments {
+    margin: 4em 0;
+}
+
+#comments h2 {
+    padding-left: 0px;
+    border-left: 0px;
+}
+
+.pub-title {
+    font-size: 20px;
+    margin-bottom: 0.5rem
+}
+
+.pub-authors {
+    font-size: 14px;
+}
+
+.pub-journal {
+    font-size: 14px;
+    font-style: italic;
+}

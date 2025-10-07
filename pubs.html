@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Academic Publications"
+date:
+author:
+commentsId:
+---
+
+{% for pub in site.data.pubs %}
+<div>
+    <div class="pub-title"><a href="{{pub.url}}">{{ pub.title }}</a></div>
+    <div class="pub-auth">
+        {{pub.authors | array_to_sentence_string: '' }}
+    </div>
+    <div class="pub-journal">{{pub.journal}}, {{pub.year}}</div>
+</div>
+<hr>
+{% endfor %}

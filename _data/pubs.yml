@@ -1,0 +1,15 @@
+- title: Towards reproducible state-of-the-art energy disaggregation
+  authors: ["Batra", "Kukunuri", "Pandey", "Malakar", "Kumar", "Krystalakos", "Zhong", "Meira", "Parson"]
+  journal: BuildSys '19
+  url: "https://dl.acm.org/doi/abs/10.1145/3360322.3360844"
+  year: 2019
+- title: Sliding Window Approach for Online Energy Disaggregation Using Artificial Neural Networks
+  authors: ["Krystalakos", "Nalmpantis", "Vrakas"]
+  journal: SETN '18
+  url: "https://dl.acm.org/doi/abs/10.1145/3200947.3201011"
+  year: 2018
+- title: Energy profile representation in vector space
+  authors: ["Nalmpantis", "Krystalakos", "Vrakas"]
+  journal: SETN '18
+  url: "https://dl.acm.org/doi/abs/10.1145/3200947.3201050"
+  year: 2018
